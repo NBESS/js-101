@@ -20,4 +20,11 @@ function totalAmount(tip, billAmount) {
     return total;
 }
 
-console.log(totalAmount(tipAmount(190.75, 'good'), 190.75));
+// console.log(totalAmount(tipAmount(190.75, 'good'), 190.75));
+
+function splitAmount(billTotal, splitWays) {
+    let finalAmount = billTotal / splitWays;
+    return finalAmount;
+}
+
+console.log(splitAmount(totalAmount(tipAmount(40, 'fair'), 40), 2));
