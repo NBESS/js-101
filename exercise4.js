@@ -1,16 +1,23 @@
-function tipAmount (billAmount, levelOfService){
+function tipAmount(billAmount, levelOfService){
+    let tip = 0
     if (levelOfService === "good"){
-        tipPercentage = .20;
+        tip = billAmount * .20;
     }
     else if (levelOfService === "fair"){
-        tipPercentage = .15;
+        tip = billAmount * .15;
     }
 
     else if (levelOfService === "bad"){
-        tipPercentage = .10;
+        tip = billAmount * .10;
     }
-    tip = billAmount * tipPercentage;
     return tip;
 }
 
-console.log(tipAmount(100, 'fair'));
+// console.log(tipAmount(123, 'good'));
+
+function totalAmount(tip, billAmount) {
+    let total = tip + billAmount;
+    return total;
+}
+
+console.log(totalAmount(tipAmount(190.75, 'good'), 190.75));
